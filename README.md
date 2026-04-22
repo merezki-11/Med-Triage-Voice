@@ -6,13 +6,22 @@ A production-ready clinical intake application that democratizes medical data en
 
 ---
 
-## Screenshots
+## Scenarios in Action
 
-### Clinical Intake Interface
-*(Add your screenshot here)*
+### Scenario 1: Elderly Fall Risk with Blood Thinners (High Severity)
+| Audio Transcript | Extracted Triage Data |
+| :---: | :---: |
+| <img src="images/scenario1_transcript.jpeg" width="300"> | <img src="images/scenario1_triage.jpeg" width="300"> |
 
-### Structured Data Extraction  
-*(Add your screenshot here)*
+### Scenario 2: Pediatric Anaphylaxis (Critical Severity)
+| Audio Transcript | Extracted Triage Data |
+| :---: | :---: |
+| <img src="images/scenario2_transcript.jpeg" width="300"> | <img src="images/scenario2_triage.jpeg" width="300"> |
+
+### Scenario 3: Acute Abdominal Pain, Possible Appendicitis (High Severity)
+| Audio Transcript | Extracted Triage Data |
+| :---: | :---: |
+| <img src="images/scenario3_transcript.jpeg" width="300"> | <img src="images/scenario3_triage.jpeg" width="300"> |
 
 ---
 
