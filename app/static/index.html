@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacSolve Med-Triage Voice</title>
+    <!-- Use MacSolve Logo as favicon as per standard -->
+    <link rel="icon" type="image/png" href="/static/MacSolve Logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="brand">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h1>Med-Triage AI</h1>
+            </div>
+            <p class="subtitle">Multilingual Clinical Intake System</p>
+        </header>
+
+        <main>
+            <div class="recorder-section">
+                <button id="recordBtn" class="premium-btn">
+                    <span class="btn-icon"><i class="fa-solid fa-microphone"></i></span>
+                    <span id="recordText">Start Recording</span>
+                </button>
+                <div class="audio-waves" id="waves">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="upload-alternative">
+                    <p>or</p>
+                    <input type="file" id="audioUpload" accept="audio/*" class="file-input">
+                    <label for="audioUpload" class="upload-label">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Upload Audio File
+                    </label>
+                </div>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>AI is analyzing the audio...</p>
+            </div>
+
+            <div id="results" class="results-container hidden">
+                <div class="card transcript-card">
+                    <h3><i class="fa-solid fa-file-lines"></i> Transcript <span id="lang-tag" class="badge"></span></h3>
+                    <p id="transcriptText"></p>
+                </div>
+
+                <div class="card clinical-card">
+                    <h3><i class="fa-solid fa-clipboard-user"></i> Structured Clinical Data</h3>
+                    <div class="data-grid">
+                        <div class="data-item">
+                            <span class="label">Patient Name</span>
+                            <span class="value" id="patientName"></span>
+                        </div>
+                        <div class="data-item">
+                            <span class="label">Severity</span>
+                            <span class="value badge" id="severityLevel"></span>
+                        </div>
+                        <div class="data-item full-width">
+                            <span class="label">Primary Symptoms</span>
+                            <div class="tags" id="symptomsList"></div>
+                        </div>
+                        <div class="data-item full-width">
+                            <span class="label">Duration</span>
+                            <span class="value" id="durationText"></span>
+                        </div>
+                        <div class="data-item full-width highlight">
+                            <span class="label">Recommended Triage</span>
+                            <span class="value" id="recommendedTriage"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by <strong>MacSolve Analytics</strong> | Local Whisper & Gemini Flash</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
